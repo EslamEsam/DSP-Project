@@ -1,0 +1,6 @@
+C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPComponents\bin\Debug\DSPComponents.dll
+C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPComponents\bin\Debug\DSPComponents.pdb
+C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPComponents\obj\Debug\DSPAlgorithms.csproj.AssemblyReference.cache
+C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPComponents\obj\Debug\DSPAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPComponents\obj\Debug\DSPComponents.dll
+C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPComponents\obj\Debug\DSPComponents.pdb
