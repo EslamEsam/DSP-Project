@@ -19,11 +19,12 @@ namespace DSPAlgorithms.Algorithms
             float min = InputSignal.Samples.Min();
             float max = InputSignal.Samples.Max();
             List<float> outputsignals = new List<float>();
-            //for (int i = 0; i < InputSignal.Samples.Count; i++)
-            //{
-            //    outputsignals.Add(((InputSignal.Samples[i] - min) / max - min  ) * ((InputMaxRange - InputMinRange) + InputMinRange ));
+            for (int i = 0; i < InputSignal.Samples.Count; i++)
+            {
+                outputsignals.Add(((InputSignal.Samples[i] - min) / (max - min)) * (InputMaxRange - InputMinRange) + InputMinRange);
 
-            //}
+            }
+            /*
             if (InputMinRange < 0)
             {
                 for (int i = 0; i < InputSignal.Samples.Count; i++)
@@ -38,7 +39,8 @@ namespace DSPAlgorithms.Algorithms
                     outputsignals.Add ( (InputSignal.Samples[i] - min) / (max - min) );
                 }
             }
-            OutputNormalizedSignal= new Signal(outputsignals, false);
+            */
+            OutputNormalizedSignal = new Signal(outputsignals, false);
         }
     }
 }

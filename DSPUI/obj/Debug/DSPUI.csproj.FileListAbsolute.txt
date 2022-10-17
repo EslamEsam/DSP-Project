@@ -91,3 +91,33 @@ C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolb
 C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.CopyComplete
 C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.exe
 C:\Users\eslam\Downloads\Compressed\DSP\Lab 1\Package and Task\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.pdb
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\Media\Warning.png
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\DSPUI.exe.config
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\DSPUI.exe
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\DSPUI.pdb
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\DSPComponents.dll
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\OxyPlot.dll
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\DSPComponents.pdb
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\OxyPlot.pdb
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\OxyPlot.xml
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\OxyPlot.WindowsForms.pdb
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.csproj.AssemblyReference.cache
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.DiscreteFourierTransform.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FastFourierTransform.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FileInputSignal.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FIR.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MovingAverage.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MultiplySignalByConstant.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Normalizer.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.QuantizationAndEncoding.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Shifter.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.DSPToolbox.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.Properties.Resources.resources
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.csproj.GenerateResource.cache
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.csproj.CoreCompileInputs.cache
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.csproj.CopyComplete
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.exe
+C:\Users\eslam\Source\Repos\DSP-Project\DSPUI\obj\Debug\DSPUI.pdb
