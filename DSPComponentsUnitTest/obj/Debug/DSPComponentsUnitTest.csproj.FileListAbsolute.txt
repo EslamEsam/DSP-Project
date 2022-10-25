@@ -128,3 +128,5 @@ C:\Users\eslam\Source\Repos\DSP-Project\DSPComponentsUnitTest\obj\Debug\DSPCompo
 C:\Users\eslam\Source\Repos\DSP-Project\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.csproj.CopyComplete
 C:\Users\eslam\Source\Repos\DSP-Project\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.dll
 C:\Users\eslam\Source\Repos\DSP-Project\DSPComponentsUnitTest\obj\Debug\DSPComponentsUnitTest.pdb
+C:\Users\eslam\source\repos\DSP-Project\DSPComponentsUnitTest\bin\Debug\TestingSignals\Cos.ds
+C:\Users\eslam\source\repos\DSP-Project\DSPComponentsUnitTest\bin\Debug\TestingSignals\Sin.ds

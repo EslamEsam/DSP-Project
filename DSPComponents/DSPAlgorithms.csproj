@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Algorithms\Algorithm.cs" />
     <Compile Include="Algorithms\Adder.cs" />
+    <Compile Include="Algorithms\DC_Component.cs" />
     <Compile Include="Algorithms\DirectConvolution.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -73,6 +74,7 @@
     </Compile>
     <Compile Include="Algorithms\QuantizationAndEncoding.cs" />
     <Compile Include="Algorithms\Shifter.cs" />
+    <Compile Include="Algorithms\SinCos.cs" />
     <Compile Include="Algorithms\Subtractor.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -83,7 +85,6 @@
     <Compile Include="DataStructures\Signal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
