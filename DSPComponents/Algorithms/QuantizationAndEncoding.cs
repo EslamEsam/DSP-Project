@@ -32,22 +32,22 @@ namespace DSPAlgorithms.Algorithms
             {
                 switch (result.Length)
                 {
+                    case 0:
+                        return "000";
                     case 1:
                         return "00" + result;
                     case 2:
                         return "0" + result;
-                    case 0:
-                        return "000";
                 }
             }
-            if (levels == 4)
+            else if (levels == 4)
             {
                 switch (result.Length)
                 {
-                    case 1:
-                        return "0" + result;
                     case 0:
                         return "00";
+                    case 1:
+                        return "0" + result;
                 }
             }
             return result;
@@ -85,7 +85,6 @@ namespace DSPAlgorithms.Algorithms
                         float sig = (float)Math.Round(((Decimal)(intervals[j] + intervals[j - 1]) / 2), 3, MidpointRounding.AwayFromZero);
                         samples.Add(sig);
                         OutputIntervalIndices.Add(j);
-                        Console.WriteLine(j);
                         OutputEncodedSignal.Add(DecToBin(j-1,InputLevel));
                         OutputSamplesError.Add(sig - InputSignal.Samples[i]);
 
