@@ -89,9 +89,7 @@ namespace DSPComponentsUnitTest
             {
                 if (expectedEncodedValues[i] != Q.OutputEncodedSignal[i])
                 {
-                    //Console.WriteLine(Q.OutputEncodedSignal[i]);
-                    //Console.WriteLine(expectedEncodedValues[i]);
-                    //Console.WriteLine(i);
+                    
                     encodedValues = false;
                     break;
                 }
