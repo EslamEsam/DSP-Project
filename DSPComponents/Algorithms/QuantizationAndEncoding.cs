@@ -21,13 +21,9 @@ namespace DSPAlgorithms.Algorithms
 
         public string DecToBin(int num, int levels)
         {
-            string result = "";
-            while (num >= 1)
-            {
-                int remainder = num % 2;
-                result = Convert.ToString(remainder) + result;
-                num /= 2;
-            }
+            string result = Convert.ToString(num, 2);
+            
+            
             if (levels == 8)
             {
                 switch (result.Length)
@@ -86,6 +82,7 @@ namespace DSPAlgorithms.Algorithms
                         samples.Add(sig);
                         OutputIntervalIndices.Add(j);
                         OutputEncodedSignal.Add(DecToBin(j-1,InputLevel));
+                        //OutputEncodedSignal.Add(Convert.ToString(j - 1, 2));
                         OutputSamplesError.Add(sig - InputSignal.Samples[i]);
 
                         break;
