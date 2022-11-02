@@ -22,7 +22,6 @@ namespace DSPComponentsUnitTest
             var Frequencies = new List<float> { 0, 1, 2, 3, 4, 5, 6, 7 };
 
             DFT.Run();
-
             Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(FrequenciesAmplitudes, DFT.OutputFreqDomainSignal.FrequenciesAmplitudes)
                 && UnitTestUtitlities.SignalsPhaseShiftsAreEqual(FrequenciesPhaseShifts, DFT.OutputFreqDomainSignal.FrequenciesPhaseShifts));
 

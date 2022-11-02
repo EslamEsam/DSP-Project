@@ -12,9 +12,28 @@ namespace DSPAlgorithms.Algorithms
         public Signal InputFreqDomainSignal { get; set; }
         public Signal OutputTimeDomainSignal { get; set; }
 
+        public struct number
+        {
+            public float cos;
+            public float sin;
+        };
+
         public override void Run()
         {
-            throw new NotImplementedException();
+            List<float> samples = new List<float>();
+
+            for (int i = 0; i < InputFreqDomainSignal.Frequencies.Count; i++)
+            {
+                number num = new number();
+                for (int j = 0; j < InputFreqDomainSignal.Frequencies.Count; j++)
+                {
+                    //(amp*phase)*(2*pi*n*k / N)
+                    num.cos += (InputFreqDomainSignal.FrequenciesAmplitudes[j] * (float)Math.Cos(InputFreqDomainSignal.FrequenciesPhaseShifts[j])) * ((float)Math.Cos((2*Math.PI*i*j) / InputFreqDomainSignal.Frequencies.Count));
+                    num.sin += -1 * (InputFreqDomainSignal.FrequenciesAmplitudes[j] * (float)Math.Sin(InputFreqDomainSignal.FrequenciesPhaseShifts[j])) * ((float)Math.Sin((2 * Math.PI * i * j) / InputFreqDomainSignal.Frequencies.Count));
+                }
+                samples.Add((num.cos + num.sin) / InputFreqDomainSignal.Frequencies.Count);
+            }
+            OutputTimeDomainSignal = new Signal(samples, false);
         }
     }
 }

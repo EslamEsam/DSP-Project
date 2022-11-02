@@ -82,11 +82,9 @@ namespace DSPAlgorithms.Algorithms
                         samples.Add(sig);
                         OutputIntervalIndices.Add(j);
                         OutputEncodedSignal.Add(DecToBin(j-1,InputLevel));
-                        //OutputEncodedSignal.Add(Convert.ToString(j - 1, 2));
                         OutputSamplesError.Add(sig - InputSignal.Samples[i]);
-
                         break;
-                    }
+                    }   
                 }
             }
             OutputQuantizedSignal = new Signal(samples, false);
