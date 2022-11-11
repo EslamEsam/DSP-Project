@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\AccumulationSum.cs" />
     <Compile Include="Algorithms\Algorithm.cs" />
     <Compile Include="Algorithms\Adder.cs" />
     <Compile Include="Algorithms\DC_Component.cs" />
+    <Compile Include="Algorithms\Derivatives.cs" />
     <Compile Include="Algorithms\DirectConvolution.cs">
       <SubType>Code</SubType>
     </Compile>
