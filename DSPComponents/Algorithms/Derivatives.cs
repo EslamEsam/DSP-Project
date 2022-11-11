@@ -19,12 +19,14 @@ namespace DSPAlgorithms.Algorithms
             List<float> firstSamples = new List<float>();
             List<float> secondSamples = new List<float>();
 
-            for (int i = 0; i < InputSignal.Samples.Count-1; i++)
+            for (int i = 1; i < InputSignal.Samples.Count; i++)
             {
-                //firstSamples.Add(InputSignal.Samples[i] - InputSignal.Samples[i-1]);
-                firstSamples.Add(1);
-                secondSamples.Add(0);
-                //secondSamples.Add(InputSignal.Samples[i+1] - (2* InputSignal.Samples[i]) + InputSignal.Samples[i - 1]);
+                firstSamples.Add(InputSignal.Samples[i] - InputSignal.Samples[i-1]);
+
+                if (i == InputSignal.Samples.Count - 1)
+                    break;
+                secondSamples.Add(InputSignal.Samples[i+1] - (2* InputSignal.Samples[i]) + InputSignal.Samples[i - 1]);
+
             }
 
             FirstDerivative = new Signal(firstSamples, false);

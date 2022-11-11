@@ -36,6 +36,7 @@ namespace DSPAlgorithms.Algorithms
                 if (i == total - 1 && sum == 0)
                     continue;
                 samples.Add(sum);
+
             }
             int min = Math.Min(InputSignal1.SamplesIndices.Min(), InputSignal2.SamplesIndices.Min());
             int max = Math.Max(InputSignal1.SamplesIndices.Max(), InputSignal2.SamplesIndices.Max());
