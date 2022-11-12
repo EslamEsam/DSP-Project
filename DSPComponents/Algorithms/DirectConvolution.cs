@@ -26,8 +26,8 @@ namespace DSPAlgorithms.Algorithms
                 float x = 0, h = 0, sum = 0;
                 for (int j = 0; j <= i; j++)
                 {
-                    x = (i - j < InputSignal1.Samples.Count)? x = InputSignal1.Samples[i - j]: x = 0;
-                    h = (j < InputSignal2.Samples.Count) ? h = InputSignal2.Samples[j]: h = 0;
+                    x = (j < InputSignal1.Samples.Count) ? x = InputSignal1.Samples[j]: x = 0;
+                    h = (i - j < InputSignal2.Samples.Count)? h = InputSignal2.Samples[i - j]: h = 0;
                     
                     sum += x * h;
                     
@@ -39,23 +39,33 @@ namespace DSPAlgorithms.Algorithms
 
             }
             int min = Math.Min(InputSignal1.SamplesIndices.Min(), InputSignal2.SamplesIndices.Min());
-            int max = Math.Max(InputSignal1.SamplesIndices.Max(), InputSignal2.SamplesIndices.Max());
-            if (InputSignal1.Samples.Count > InputSignal2.Samples.Count)
-            {
-                for (int i = min-1; i <= max ; i++)
+            
+                for (int i = 0 ; i < samples.Count; i++)
                 {
-                    samplesIndices.Add(i);
+                    samplesIndices.Add(min);
+                    min++;
                 }
-            }
-            else
-            {
-                for (int i = min ; i <= max+1; i++)
-                {
-                    samplesIndices.Add(i);
-                }
-            }
+            
             
             OutputConvolvedSignal = new Signal(samples,samplesIndices, false);
+
+
+            //int min = Math.Min(InputSignal1.SamplesIndices.Min(), InputSignal2.SamplesIndices.Min());
+            //int max = Math.Max(InputSignal1.SamplesIndices.Max(), InputSignal2.SamplesIndices.Max());
+            //if (InputSignal1.Samples.Count > InputSignal2.Samples.Count)
+            //{
+            //    for (int i = min - 1; i <= max; i++)
+            //    {
+            //        samplesIndices.Add(i);
+            //    }
+            //}
+            //else
+            //{
+            //    for (int i = min; i <= max + 1; i++)
+            //    {
+            //        samplesIndices.Add(i);
+            //    }
+            //}
         }
     }
 }

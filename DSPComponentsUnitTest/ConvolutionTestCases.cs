@@ -80,7 +80,9 @@ namespace DSPComponentsUnitTest
         {
             DirectConvolution dc = new DirectConvolution();
             // test case 4 ..
-            var expectedOutput = new Signal(new List<float>() {-3, 2, 2, 3, 2 }, new List<int>() { -3, -2, -1, 0, 1  }, false);
+            var expectedOutput = new Signal(new List<float>() {-3, 2, 2, 3, 2 }, new List<int>() { -2, -1, 0, 1, 2 }, false);
+            //var expectedOutput = new Signal(new List<float>() { -3, 2, 2, 3, 2 }, new List<int>() { -3, -2, -1, 0, 1 }, false);
+
 
             dc.InputSignal1 = new Signal(new List<float>() { 3, 1, 2, 0 }, new List<int>() { -2, -1, 0, 1 }, false);
             dc.InputSignal2 = new Signal(new List<float>() { -1, 1, 1 }, new List<int>() { -1, 0, 1 }, false);
