@@ -81,6 +81,7 @@
     <Compile Include="Algorithms\Subtractor.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Algorithms\TimeDelay.cs" />
     <Compile Include="Algorithms\Utilities.cs">
       <SubType>Code</SubType>
     </Compile>
