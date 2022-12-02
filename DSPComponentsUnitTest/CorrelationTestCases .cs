@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -775,7 +775,7 @@ namespace DSPComponentsUnitTest
 
         #endregion auto direct correlation
 
-       /* #region auto fast correlation
+        #region auto fast correlation
         [TestMethod]
         public void AutoFastNormalizedCorrelationTestMethod1()
         {
@@ -824,7 +824,7 @@ namespace DSPComponentsUnitTest
             Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Samples, fc.OutputNonNormalizedCorrelation));
         }
 
-        #endregion */
+        #endregion 
         
         #region cross direct correlation
 
@@ -928,7 +928,7 @@ namespace DSPComponentsUnitTest
 
         #endregion 
         
-       /* #region cross fast correlation
+        #region cross fast correlation
         [TestMethod]
         public void CrossFastNormalizedCorrelationTestMethod1()
         {
@@ -963,7 +963,7 @@ namespace DSPComponentsUnitTest
         }
 
         
-
+        /*
         [TestMethod]
         public void CrossFastNormalizedCorrelationTestMethod2()
         {
@@ -993,8 +993,8 @@ namespace DSPComponentsUnitTest
 
             Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Samples, fc.OutputNonNormalizedCorrelation));
         }
-
-        #endregion*/
+        */
+        #endregion
     }
 }
 
