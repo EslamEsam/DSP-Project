@@ -19,26 +19,27 @@ namespace DSPAlgorithms.Algorithms
         /// </summary>
         public override void Run()
         {
-            int N = InputSignal1.Samples.Count;
-            if (InputSignal2 == null)  // Auto Correlation
+            int N1 = InputSignal1.Samples.Count;
+            int N2 = InputSignal2.Samples.Count;
+            int N = N1 + N2 - 1;
+            
+            for(int i = N1; i < N; i++)
             {
-                InputSignal2 = new Signal(new List<float>(), InputSignal1.Periodic);
-                for (int i = 0; i < N; i++)
-                {
-                    InputSignal2.Samples.Add(InputSignal1.Samples[i]);
-                }
+                InputSignal1.Samples.Add(0);
+            }
+            for(int i = N2; i < N; i++)
+            {
+                InputSignal2.Samples.Add(0);
             }
 
             // Converting InputSignal1 to Fourier Transform
             DiscreteFourierTransform DFTSignal1 = new DiscreteFourierTransform();
             DFTSignal1.InputTimeDomainSignal = InputSignal1;
-            DFTSignal1.InputSamplingFrequency = 4;
             DFTSignal1.Run();
 
             // Converting InputSignal2 to Fourier Transform
             DiscreteFourierTransform DFTSignal2 = new DiscreteFourierTransform();
             DFTSignal2.InputTimeDomainSignal = InputSignal2;
-            DFTSignal2.InputSamplingFrequency = 4;
             DFTSignal2.Run();
 
             List<Complex> signal1 = new List<Complex>();
@@ -61,26 +62,29 @@ namespace DSPAlgorithms.Algorithms
             }
 
             // X1(K) . X2(K)
-            List<float> X = new List<float>();
+            List<Complex> X = new List<Complex>();
             for (int i = 0; i < N; i++)
             {
-                X.Add((float)(signal1[i].Real * signal2[i].Real) + (float)(signal1[i].Imaginary * signal2[i].Imaginary));
+                X.Add(Complex.Multiply(signal1[i], signal2[i]));
             }
 
             // FD-1 {X1(K) . X2(K)}
-            InverseDiscreteFourierTransform IDFT = new InverseDiscreteFourierTransform();
-            IDFT.InputFreqDomainSignal = new Signal(X, false);
-            IDFT.Run();
-
-            // 1/N . FD-1 {X1(K) . X2(K)}
-            List<float> outputConvolvedSignal = new List<float>();
-            for (int j = 0; j < N; j++)
+            Signal Idft = new Signal(new List<float>(), false);
+            Idft.FrequenciesAmplitudes = new List<float>();
+            Idft.FrequenciesPhaseShifts = new List<float>();
+            for (int i = 0; i < N; i++)
             {
-                float r = IDFT.OutputTimeDomainSignal.Samples[j];
-                r *= (1 / (float)N);
-                outputConvolvedSignal.Add(r);
+                double realTmp = Math.Pow(X[i].Real, 2);
+                double imagTmp = Math.Pow(X[i].Imaginary, 2);
+                Idft.FrequenciesAmplitudes.Add((float)Math.Sqrt(realTmp + imagTmp));
+
+                float phaseShiftTmp = (float)Math.Atan2(X[i].Imaginary, X[i].Real);
+                Idft.FrequenciesPhaseShifts.Add(phaseShiftTmp);
             }
-            OutputConvolvedSignal = new Signal(outputConvolvedSignal, false);
+            InverseDiscreteFourierTransform IDFT = new InverseDiscreteFourierTransform();
+            IDFT.InputFreqDomainSignal = Idft;
+            IDFT.Run();
+            OutputConvolvedSignal = new Signal(IDFT.OutputTimeDomainSignal.Samples, false);
         }
     }
 }
