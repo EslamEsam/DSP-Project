@@ -28,16 +28,18 @@ namespace DSPAlgorithms.Algorithms
             List<float> amp = new List<float>();
             List<float> frequencies = new List<float>();
 
-            float freq = (int)((2 * Math.PI) / (InputTimeDomainSignal.Samples.Count * (1 / InputSamplingFrequency)));
+            int count = InputTimeDomainSignal.Samples.Count;
 
-            for (int i = 0; i < InputTimeDomainSignal.Samples.Count; i++)
+            float freq = (int)((2 * Math.PI) / (count * (1 / InputSamplingFrequency)));
+
+            for (int i = 0; i < count; i++)
             {
                 number num = new number();
 
-                for (int j = 0; j < InputTimeDomainSignal.Samples.Count; j++)
+                for (int j = 0; j < count; j++)
                 {
-                    num.cos += InputTimeDomainSignal.Samples[j] * ((float)Math.Cos((2 * Math.PI * i * j) / InputTimeDomainSignal.Samples.Count));
-                    num.sin += -1*InputTimeDomainSignal.Samples[j] * ((float)Math.Sin((2 * Math.PI * i * j) / InputTimeDomainSignal.Samples.Count));
+                    num.cos += InputTimeDomainSignal.Samples[j] * ((float)Math.Cos((2 * Math.PI * i * j) / count));
+                    num.sin += -1*InputTimeDomainSignal.Samples[j] * ((float)Math.Sin((2 * Math.PI * i * j) / count));
 
                 }
                 amp.Add((float)(Math.Sqrt(Math.Pow(num.cos, 2) + Math.Pow(num.sin, 2))));

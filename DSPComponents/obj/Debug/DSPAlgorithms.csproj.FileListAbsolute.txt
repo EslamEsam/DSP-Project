@@ -10,3 +10,9 @@ C:\Users\eslam\Source\Repos\DSP-Project\DSPComponents\obj\Debug\DSPAlgorithms.cs
 C:\Users\eslam\Source\Repos\DSP-Project\DSPComponents\obj\Debug\DSPAlgorithms.csproj.CoreCompileInputs.cache
 C:\Users\eslam\Source\Repos\DSP-Project\DSPComponents\obj\Debug\DSPComponents.dll
 C:\Users\eslam\Source\Repos\DSP-Project\DSPComponents\obj\Debug\DSPComponents.pdb
+C:\Users\eslam\Source\Repos\EslamEsam\DSP-Project\DSPComponents\bin\Debug\DSPComponents.dll
+C:\Users\eslam\Source\Repos\EslamEsam\DSP-Project\DSPComponents\bin\Debug\DSPComponents.pdb
+C:\Users\eslam\Source\Repos\EslamEsam\DSP-Project\DSPComponents\obj\Debug\DSPAlgorithms.csproj.AssemblyReference.cache
+C:\Users\eslam\Source\Repos\EslamEsam\DSP-Project\DSPComponents\obj\Debug\DSPAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\eslam\Source\Repos\EslamEsam\DSP-Project\DSPComponents\obj\Debug\DSPComponents.dll
+C:\Users\eslam\Source\Repos\EslamEsam\DSP-Project\DSPComponents\obj\Debug\DSPComponents.pdb

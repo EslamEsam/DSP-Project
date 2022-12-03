@@ -33,12 +33,14 @@ namespace DSPAlgorithms.Algorithms
             }
 
             // Converting InputSignal1 to Fourier Transform
-            DiscreteFourierTransform DFTSignal1 = new DiscreteFourierTransform();
+            //DiscreteFourierTransform DFTSignal1 = new DiscreteFourierTransform();
+            FastFourierTransform DFTSignal1 = new FastFourierTransform();
             DFTSignal1.InputTimeDomainSignal = InputSignal1;
             DFTSignal1.Run();
 
             // Converting InputSignal2 to Fourier Transform
-            DiscreteFourierTransform DFTSignal2 = new DiscreteFourierTransform();
+            //DiscreteFourierTransform DFTSignal2 = new DiscreteFourierTransform();
+            FastFourierTransform DFTSignal2 = new FastFourierTransform();
             DFTSignal2.InputTimeDomainSignal = InputSignal2;
             DFTSignal2.Run();
 
@@ -81,7 +83,8 @@ namespace DSPAlgorithms.Algorithms
                 float phaseShiftTmp = (float)Math.Atan2(X[i].Imaginary, X[i].Real);
                 Idft.FrequenciesPhaseShifts.Add(phaseShiftTmp);
             }
-            InverseDiscreteFourierTransform IDFT = new InverseDiscreteFourierTransform();
+            //InverseDiscreteFourierTransform IDFT = new InverseDiscreteFourierTransform();
+            InverseFastFourierTransform IDFT = new InverseFastFourierTransform();
             IDFT.InputFreqDomainSignal = Idft;
             IDFT.Run();
             OutputConvolvedSignal = new Signal(IDFT.OutputTimeDomainSignal.Samples, false);

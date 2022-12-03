@@ -93,34 +93,34 @@ namespace DSPComponentsUnitTest
             Assert.IsTrue(UnitTestUtitlities.SignalsSamplesIndicesAreEqual(expectedOutput, dc.OutputConvolvedSignal));
         }
 
-        //[TestMethod]
-        //public void FastConvolutionTestMethod1()
-        //{
-        //    FastConvolution fc = new FastConvolution();
+        [TestMethod]
+        public void FastConvolutionTestMethod1()
+        {
+            FastConvolution fc = new FastConvolution();
 
-        //    var expectedOutput = new Signal(new List<float>() { 0.5f, 1, 1, 1, 1.5f, 2, 1.5f, 0.5f }, false);
+            var expectedOutput = new Signal(new List<float>() { 0.5f, 1, 1, 1, 1.5f, 2, 1.5f, 0.5f }, false);
 
-        //    fc.InputSignal1 = new Signal(new List<float>() { 1, 0, 0, 1, 1}, false);
-        //    fc.InputSignal2 = new Signal(new List<float>() { 0.5f, 1, 1, 0.5f }, false);
+            fc.InputSignal1 = new Signal(new List<float>() { 1, 0, 0, 1, 1 }, false);
+            fc.InputSignal2 = new Signal(new List<float>() { 0.5f, 1, 1, 0.5f }, false);
 
-        //    fc.Run();
+            fc.Run();
 
-        //    Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Samples, fc.OutputConvolvedSignal.Samples));
-        //}
+            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Samples, fc.OutputConvolvedSignal.Samples));
+        }
 
-        //[TestMethod]
-        //public void FastConvolutionTestMethod2()
-        //{
-        //    FastConvolution fc = new FastConvolution();
+        [TestMethod]
+        public void FastConvolutionTestMethod2()
+        {
+            FastConvolution fc = new FastConvolution();
 
-        //    var expectedOutput = new Signal(new List<float>() { 44, 143, 243, 442, 454, 367, 495, 132 }, false);
+            var expectedOutput = new Signal(new List<float>() { 44, 143, 243, 442, 454, 367, 495, 132 }, false);
 
-        //    fc.InputSignal1 = new Signal(new List<float>() { 1, 2, 3, 4 }, false);
-        //    fc.InputSignal2 = new Signal(new List<float>() { 44, 55, 1, 99, 33 }, false);
+            fc.InputSignal1 = new Signal(new List<float>() { 1, 2, 3, 4 }, false);
+            fc.InputSignal2 = new Signal(new List<float>() { 44, 55, 1, 99, 33 }, false);
 
-        //    fc.Run();
+            fc.Run();
 
-        //    Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Samples, fc.OutputConvolvedSignal.Samples));
-        //}
+            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Samples, fc.OutputConvolvedSignal.Samples));
+        }
     }
 }

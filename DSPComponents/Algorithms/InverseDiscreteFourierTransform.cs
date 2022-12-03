@@ -22,16 +22,20 @@ namespace DSPAlgorithms.Algorithms
         {
             List<float> samples = new List<float>();
 
-            for (int i = 0; i < InputFreqDomainSignal.Frequencies.Count; i++)
+            int count = InputFreqDomainSignal.FrequenciesAmplitudes.Count;
+
+            for (int i = 0; i < count; i++)
             {
                 number num = new number();
-                for (int j = 0; j < InputFreqDomainSignal.Frequencies.Count; j++)
+
+                for (int j = 0; j < count; j++)
                 {
                     //(amp*phase)*(2*pi*n*k / N)
-                    num.cos += (InputFreqDomainSignal.FrequenciesAmplitudes[j] * (float)Math.Cos(InputFreqDomainSignal.FrequenciesPhaseShifts[j])) * ((float)Math.Cos((2*Math.PI*i*j) / InputFreqDomainSignal.Frequencies.Count));
-                    num.sin += -1 * (InputFreqDomainSignal.FrequenciesAmplitudes[j] * (float)Math.Sin(InputFreqDomainSignal.FrequenciesPhaseShifts[j])) * ((float)Math.Sin((2 * Math.PI * i * j) / InputFreqDomainSignal.Frequencies.Count));
+                    num.cos += (InputFreqDomainSignal.FrequenciesAmplitudes[j] * (float)Math.Cos(InputFreqDomainSignal.FrequenciesPhaseShifts[j])) * ((float)Math.Cos((2 * Math.PI * i * j) / count));
+                    num.sin += -1 * (InputFreqDomainSignal.FrequenciesAmplitudes[j] * (float)Math.Sin(InputFreqDomainSignal.FrequenciesPhaseShifts[j])) * ((float)Math.Sin((2 * Math.PI * i * j) / count));
                 }
-                samples.Add((num.cos + num.sin) / InputFreqDomainSignal.Frequencies.Count);
+                
+                samples.Add((num.cos + num.sin) / count);
             }
             OutputTimeDomainSignal = new Signal(samples, false);
         }
