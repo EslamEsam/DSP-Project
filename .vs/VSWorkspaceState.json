@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DSPComponents",
+    "\\DSPComponents\\Algorithms"
   ],
-  "SelectedNode": "\\DSPToolbox.sln",
+  "SelectedNode": "\\DSPComponents\\Algorithms\\InverseDiscreteFourierTransform.cs",
   "PreviewInSolutionExplorer": false
 }
