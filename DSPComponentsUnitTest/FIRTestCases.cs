@@ -16,7 +16,7 @@ namespace DSPComponentsUnitTest
         public void LowCoefficientsTestMethod1()
         {
             FIR FIR = new FIR();
-                        
+
             var sig1 = UnitTestUtitlities.LoadSignal("TestingSignals/ecg400.ds");
             var expectedCoefficients = UnitTestUtitlities.LoadSignal("TestingSignals/LPFCoefficients.ds");
 
@@ -57,7 +57,7 @@ namespace DSPComponentsUnitTest
             // TODO: Add test logic here
             //
         }
-      
+
         [TestMethod]
         public void HighCoefficientsTestMethod2()
         {
@@ -99,7 +99,7 @@ namespace DSPComponentsUnitTest
 
             Assert.IsTrue(UnitTestUtitlities.SignalsSamplesIndicesAreEqual(expectedFilteredSignal, FIR.OutputYn));
         }
-    
+
         [TestMethod]
         public void BandPassCoefficientsTestMethod3()
         {
@@ -109,7 +109,7 @@ namespace DSPComponentsUnitTest
             var expectedCoefficients = UnitTestUtitlities.LoadSignal("TestingSignals/BPFCoefficients.ds");
 
             FIR.InputFilterType = DSPAlgorithms.DataStructures.FILTER_TYPES.BAND_PASS;
-   
+
             FIR.InputFS = 1000;
             FIR.InputStopBandAttenuation = 60;
             FIR.InputF1 = 150;
@@ -132,7 +132,7 @@ namespace DSPComponentsUnitTest
             var expectedFilteredSignal = UnitTestUtitlities.LoadSignal("TestingSignals/ecg_band_pass_filtered.ds");
 
             FIR.InputFilterType = DSPAlgorithms.DataStructures.FILTER_TYPES.BAND_PASS;
-            
+
             FIR.InputFS = 1000;
             FIR.InputStopBandAttenuation = 60;
             FIR.InputF1 = 150;
