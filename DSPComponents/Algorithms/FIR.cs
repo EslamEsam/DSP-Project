@@ -85,20 +85,32 @@ namespace DSPAlgorithms.Algorithms
                 N = (int)(res + 2);
             }
             // cutoff freq
-            float fc1,fc2 = 0;
-            if (InputFilterType == FILTER_TYPES.LOW || InputFilterType == FILTER_TYPES.HIGH)
+            float fc1 = 0,fc2 = 0;
+            if (InputFilterType == FILTER_TYPES.LOW)
             {
                 fc1 = (float)(InputCutOffFrequency + (InputTransitionBand / 2));
                 fc1 /= InputFS;
             }
-            else
+            else if (InputFilterType == FILTER_TYPES.HIGH)
             {
-                fc1 = (float)(InputF1 + (InputTransitionBand / 2));
+                fc1 = (float)(InputCutOffFrequency - (InputTransitionBand / 2));
+                fc1 /= InputFS;
+            }
+            else if (InputFilterType == FILTER_TYPES.BAND_PASS)
+            {
+                fc1 = (float)(InputF1 - (InputTransitionBand / 2));
                 fc2 = (float)(InputF2 + (InputTransitionBand / 2));
                 fc1 /= InputFS;
                 fc2 /= InputFS;
             }
-            
+            else if (InputFilterType == FILTER_TYPES.BAND_STOP)
+            {
+                fc1 = (float)(InputF1 + (InputTransitionBand / 2));
+                fc2 = (float)(InputF2 - (InputTransitionBand / 2));
+                fc1 /= InputFS;
+                fc2 /= InputFS;
+            }
+
             for (int i = -(int)(N / 2); i <= (N/2); i++)
             {
                 indcies.Add(i);
@@ -133,15 +145,14 @@ namespace DSPAlgorithms.Algorithms
                     if (n == 0)
                     {
                         float hn = (float) (2 * fc1);
-                        hn--;
+                        hn = 1 - hn;
                         float wn = windowFn(type, n, N);
                         Hn.Add((hn * wn));
                     }
                     else
                     {
                         float wc = (float)(2 * Math.PI * fc1 * n);
-                        float hn = (float)((2 * fc1 * Math.Sin(wc)) / wc);
-                        hn *= -1;
+                        float hn = (float)((-2 * fc1 * Math.Sin(wc)) / wc);
                         float wn = windowFn(type, n, N);
                         Hn.Add((hn * wn));
                     }
@@ -162,7 +173,7 @@ namespace DSPAlgorithms.Algorithms
                     {
                         float wc1 = (float)(2 * Math.PI * fc1 * n);
                         float wc2 = (float)(2 * Math.PI * fc2 * n);
-                        float hn = (float)((2 * fc2 * Math.Sin(wc2)) / wc2) - (float)((2 * fc1 * Math.Sin(wc1)) / wc1);
+                        float hn = (float)((2 * fc2 * (Math.Sin(wc2) / wc2)) - (float)((2 * fc1 * ((Math.Sin(wc1)) / wc1))));
                         float wn = windowFn(type, n, N);
                         Hn.Add((hn * wn));
                     }
@@ -176,12 +187,13 @@ namespace DSPAlgorithms.Algorithms
                     if (n == 0)
                     {
                         float hn = (float)(2 * (fc2 - fc1));
+                        hn = 1 - hn;
                         float wn = windowFn(type, n, N);
                         Hn.Add((hn * wn));
                     }
                     else
                     {
-                        float wc1 = (float) (1 - (2 * Math.PI * fc1 * n));
+                        float wc1 = (float) (2 * Math.PI * fc1 * n);
                         float wc2 = (float)(2 * Math.PI * fc2 * n);
                         float hn = (float)((2 * fc1 * Math.Sin(wc1)) / wc1) - (float)((2 * fc2 * Math.Sin(wc2)) / wc2);
                         float wn = windowFn(type, n, N);
@@ -197,7 +209,7 @@ namespace DSPAlgorithms.Algorithms
             fc.InputSignal1 = InputTimeDomainSignal;
             fc.InputSignal2 = new Signal(copy, indcies, false);
             fc.Run();
-            OutputYn = new Signal(fc.OutputConvolvedSignal.Samples, false);
+            OutputYn = fc.OutputConvolvedSignal;
         }
     }
 }
