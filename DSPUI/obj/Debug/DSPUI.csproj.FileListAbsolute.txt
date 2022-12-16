@@ -151,3 +151,32 @@ C:\Users\eslam\source\repos\EslamEsam\DSP-Project\DSPUI\obj\Debug\DSPUI.csproj.C
 C:\Users\eslam\source\repos\EslamEsam\DSP-Project\DSPUI\obj\Debug\DSPUI.csproj.CopyComplete
 C:\Users\eslam\source\repos\EslamEsam\DSP-Project\DSPUI\obj\Debug\DSPUI.exe
 C:\Users\eslam\source\repos\EslamEsam\DSP-Project\DSPUI\obj\Debug\DSPUI.pdb
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\Media\Warning.png
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\DSPUI.exe.config
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\DSPUI.exe
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\DSPUI.pdb
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\DSPComponents.dll
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\OxyPlot.dll
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\OxyPlot.WindowsForms.dll
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\DSPComponents.pdb
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\OxyPlot.pdb
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\OxyPlot.xml
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\OxyPlot.WindowsForms.pdb
+F:\College\7th Term\DSP\Tasks\DSPUI\bin\Debug\OxyPlot.WindowsForms.xml
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.csproj.AssemblyReference.cache
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.DiscreteFourierTransform.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FastFourierTransform.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FileInputSignal.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FIR.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MovingAverage.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MultiplySignalByConstant.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Normalizer.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.QuantizationAndEncoding.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Shifter.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.DSPToolbox.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.Properties.Resources.resources
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.csproj.GenerateResource.cache
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.csproj.CoreCompileInputs.cache
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.csproj.CopyComplete
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.exe
+F:\College\7th Term\DSP\Tasks\DSPUI\obj\Debug\DSPUI.pdb

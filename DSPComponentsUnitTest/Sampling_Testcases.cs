@@ -26,6 +26,11 @@ namespace DSPComponentsUnitTest
             s.InputSignal = sig1;
             s.Run();
 
+            //for(int i=0; i<expectedOutput.Samples.Count; i++)
+            //{
+            //    Console.WriteLine(s.OutputSignal.Samples[i] + " : " + expectedOutput.Samples[i]);
+            //}
+
             Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Samples, s.OutputSignal.Samples));
         }
 
