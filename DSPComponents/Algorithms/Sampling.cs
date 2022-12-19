@@ -1,4 +1,4 @@
-﻿﻿using DSPAlgorithms.DataStructures;
+﻿using DSPAlgorithms.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,22 +31,23 @@ namespace DSPAlgorithms.Algorithms
                 filteredSignal = UpSampling(InputSignal);
                 fir.InputTimeDomainSignal = filteredSignal;
                 fir.Run();
-                OutputSignal = fir.OutputHn;
+                OutputSignal = fir.OutputYn;
             }
             else if(M != 0 && L == 0)  // Apply filter first and thereafter down sample by M factor.
             {
                 fir.InputTimeDomainSignal = InputSignal;
                 fir.Run();
-                OutputSignal = DownSampling(fir.OutputHn);
+                OutputSignal = DownSampling(fir.OutputYn);
             }
             else if(M != 0 && L != 0)  // This means we want to change sample rate by fraction.
             {
                 // Thus, first up sample by L factor, apply low pass filter
                 filteredSignal = UpSampling(InputSignal);
                 fir.InputTimeDomainSignal = filteredSignal;
+                fir.Run();
 
                 // Then down sample by M factor.
-                OutputSignal = DownSampling(filteredSignal);
+                OutputSignal = DownSampling(fir.OutputYn);
             }
             else  // Return error message
             {
@@ -61,6 +62,11 @@ namespace DSPAlgorithms.Algorithms
             for(int i=0; i<N; i++)
             {
                 samples.Add(signal.Samples[i]);
+                if (i == N - 1)  // et2alet fl lecture
+                {
+                    samples.Add(0);
+                    break;
+                }
                 for(int j = 0; j < L - 1; j++)
                 {
                     samples.Add(0);
@@ -78,7 +84,7 @@ namespace DSPAlgorithms.Algorithms
             while(i < N)
             {
                 samples.Add(signal.Samples[i]);
-                i += (M - 1);
+                i += M;
             }
             signal.Samples = samples;
             return signal;
