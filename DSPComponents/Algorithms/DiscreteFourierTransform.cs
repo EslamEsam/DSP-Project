@@ -30,7 +30,8 @@ namespace DSPAlgorithms.Algorithms
 
             int count = InputTimeDomainSignal.Samples.Count;
 
-            float freq = (int)((2 * Math.PI) / (count * (1 / InputSamplingFrequency)));
+            float freq = (float)Math.Round(((2 * Math.PI) / (count * (1 / InputSamplingFrequency))),4);
+
 
             for (int i = 0; i < count; i++)
             {
@@ -43,8 +44,8 @@ namespace DSPAlgorithms.Algorithms
 
                 }
                 amp.Add((float)(Math.Sqrt(Math.Pow(num.cos, 2) + Math.Pow(num.sin, 2))));
-                phaseShift.Add((float)Math.Atan2(num.sin,num.cos));
-                frequencies.Add(freq * (i + 1));
+                phaseShift.Add((float)Math.Round((float)Math.Atan2(num.sin,num.cos),6,MidpointRounding.AwayFromZero));
+                frequencies.Add((float)Math.Round((freq * i),1,MidpointRounding.AwayFromZero));
             }
             OutputFreqDomainSignal = new Signal(InputTimeDomainSignal.Samples, false, frequencies, amp, phaseShift);
         }

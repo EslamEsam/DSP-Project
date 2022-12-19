@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DSPAlgorithms</RootNamespace>
     <AssemblyName>DSPComponents</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -76,6 +76,7 @@
     <Compile Include="Algorithms\Normalizer.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Algorithms\PracticalTask2.cs" />
     <Compile Include="Algorithms\QuantizationAndEncoding.cs" />
     <Compile Include="Algorithms\Sampling.cs" />
     <Compile Include="Algorithms\Shifter.cs" />

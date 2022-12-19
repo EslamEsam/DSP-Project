@@ -60,8 +60,9 @@ namespace DSPAlgorithms.Algorithms
             int count = InputTimeDomainSignal.Samples.Count;
 
             //float freq = (int)((2 * Math.PI) / (count * (1 / InputSamplingFrequency)));
+            float freq = (float)Math.Round(((2 * Math.PI) / (count * (1 / InputSamplingFrequency))), 4);
 
-            for(int i = 0; i < count;i++)
+            for (int i = 0; i < count;i++)
                 complexes.Add(new Complex(InputTimeDomainSignal.Samples[i],0));
 
             FFT(ref complexes, count);
@@ -70,7 +71,7 @@ namespace DSPAlgorithms.Algorithms
             {
                 amp.Add((float)(Math.Sqrt(Math.Pow(complexes[i].Real, 2) + Math.Pow(complexes[i].Imaginary, 2))));
                 phaseShift.Add((float)Math.Atan2(complexes[i].Imaginary, complexes[i].Real));
-                //frequencies.Add(freq * (i + 1));
+                frequencies.Add((float)Math.Round((freq * i), 1, MidpointRounding.AwayFromZero));
             }
             OutputFreqDomainSignal = new Signal(InputTimeDomainSignal.Samples, false, frequencies, amp, phaseShift);
         }
