@@ -36,15 +36,20 @@ namespace DSPAlgorithms.Algorithms
             for (int i = 0; i < count; i++)
             {
                 number num = new number();
+                Complex sum= new Complex(0,0);
 
                 for (int j = 0; j < count; j++)
                 {
                     num.cos += InputTimeDomainSignal.Samples[j] * ((float)Math.Cos((2 * Math.PI * i * j) / count));
-                    num.sin += -1*InputTimeDomainSignal.Samples[j] * ((float)Math.Sin((2 * Math.PI * i * j) / count));
+                    num.sin += -InputTimeDomainSignal.Samples[j] * ((float)Math.Sin((2 * Math.PI * i * j) / count));
+                    Complex temp = new Complex(InputTimeDomainSignal.Samples[j] * ((float)Math.Cos((2 * Math.PI * i * j) / count)), -InputTimeDomainSignal.Samples[j] * ((float)Math.Sin((2 * Math.PI * i * j) / count)));
+                    sum = new Complex(temp.Real + sum.Real, temp.Imaginary + sum.Imaginary);
 
                 }
                 amp.Add((float)(Math.Sqrt(Math.Pow(num.cos, 2) + Math.Pow(num.sin, 2))));
-                phaseShift.Add((float)Math.Round((float)Math.Atan2(num.sin,num.cos),6,MidpointRounding.AwayFromZero));
+                //amp.Add((float)sum.Magnitude);
+                phaseShift.Add((float)Math.Atan2(num.sin,num.cos));
+               // phaseShift.Add((float)sum.Phase);
                 frequencies.Add((float)Math.Round((freq * i),1,MidpointRounding.AwayFromZero));
             }
             OutputFreqDomainSignal = new Signal(InputTimeDomainSignal.Samples, false, frequencies, amp, phaseShift);

@@ -25,7 +25,9 @@ namespace DSPAlgorithms.Algorithms
             FIR fir = new FIR();
             fir.InputStopBandAttenuation = 50;
             fir.InputTransitionBand = 500;
-            fir.InputFilterType = FILTER_TYPES.LOW;
+            fir.InputFilterType = FILTER_TYPES.BAND_PASS;
+            fir.InputF1 = miniF;
+            fir.InputF2 = maxF;
             fir.InputFS = Fs;
             fir.InputCutOffFrequency = maxF;
             fir.InputTimeDomainSignal = InputSignal;
