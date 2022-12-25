@@ -26,16 +26,12 @@ namespace DSPComponentsUnitTest
 
             var signal = UnitTestUtitlities.LoadSignal(T2_Obj.SignalPath);
             T2_Obj.Run();
-            Signal Res=T2_Obj.OutputFreqDomainSignal;
+            Signal Res = T2_Obj.OutputFreqDomainSignal;
+
 
             var expectedOutput = UnitTestUtitlities.LoadSignal("TestingSignals/FileDown.ds");
 
-            Console.WriteLine(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Frequencies, Res.Frequencies));
-            Console.WriteLine(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, Res.FrequenciesAmplitudes));
-            Console.WriteLine(UnitTestUtitlities.SignalsPhaseShiftsAreEqual(expectedOutput.FrequenciesPhaseShifts, Res.FrequenciesPhaseShifts));
-
-            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.Frequencies, Res.Frequencies)
-                 && UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, Res.FrequenciesAmplitudes)
+            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, Res.FrequenciesAmplitudes)
                 && UnitTestUtitlities.SignalsPhaseShiftsAreEqual(expectedOutput.FrequenciesPhaseShifts, Res.FrequenciesPhaseShifts));
         }
     }

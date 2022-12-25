@@ -59,7 +59,7 @@ namespace DSPAlgorithms.Algorithms
             saveSignal(@"C:\Users\eslam\OneDrive\Desktop\NormalizerSignal.ds", normalizer.OutputNormalizedSignal);
             DiscreteFourierTransform dft = new DiscreteFourierTransform();
             dft.InputTimeDomainSignal = normalizer.OutputNormalizedSignal;
-            dft.InputSamplingFrequency = (int)Fs;
+            dft.InputSamplingFrequency = (newFs >= 2 * maxF) ? dft.InputSamplingFrequency = (int)Fs : dft.InputSamplingFrequency = (int)newFs;
             dft.Run();
             saveSignal(@"C:\Users\eslam\OneDrive\Desktop\DFTSignal.ds", dft.OutputFreqDomainSignal);
             OutputFreqDomainSignal = dft.OutputFreqDomainSignal;

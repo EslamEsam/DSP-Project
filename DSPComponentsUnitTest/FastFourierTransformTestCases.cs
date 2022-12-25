@@ -11,42 +11,41 @@ namespace DSPComponentsUnitTest
     {
         //input : Signal1_1024
         //output : Signal1_FFT
-        [TestMethod]
-        public void FFT_TestMethod1()
-        {
-            FastFourierTransform FFT = new FastFourierTransform();
-            // test case 1 ..
-            var sig1 = UnitTestUtitlities.LoadSignal("TestingSignals/Signal1_1024.ds");
-            var expectedOutput = UnitTestUtitlities.LoadSignal("TestingSignals/Signal1_FFT.ds");
+        //public void FFT_TestMethod1()
+        //{
+        //    FastFourierTransform FFT = new FastFourierTransform();
+        //    // test case 1 ..
+        //    var sig1 = UnitTestUtitlities.LoadSignal("TestingSignals/Signal1_1024.ds");
+        //    var expectedOutput = UnitTestUtitlities.LoadSignal("TestingSignals/Signal1_FFT.ds");
 
-            FFT.InputTimeDomainSignal = sig1;
-            FFT.InputSamplingFrequency = 8;
+        //    FFT.InputTimeDomainSignal = sig1;
+        //    FFT.InputSamplingFrequency = 8;
             
-            FFT.Run();
+        //    FFT.Run();
 
-            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, FFT.OutputFreqDomainSignal.FrequenciesAmplitudes) 
-                && UnitTestUtitlities.SignalsPhaseShiftsAreEqual(expectedOutput.FrequenciesPhaseShifts, FFT.OutputFreqDomainSignal.FrequenciesPhaseShifts));
-        }
+        //    Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, FFT.OutputFreqDomainSignal.FrequenciesAmplitudes) 
+        //        && UnitTestUtitlities.SignalsPhaseShiftsAreEqual(expectedOutput.FrequenciesPhaseShifts, FFT.OutputFreqDomainSignal.FrequenciesPhaseShifts));
+        //}
 
-        //input : Signal2_2048
-        //output : Signal2_FFT
+        ////input : Signal2_2048
+        ////output : Signal2_FFT
 
-        [TestMethod]
-        public void FFT_TestMethod2()
-        {
-            FastFourierTransform FFT = new FastFourierTransform();
-            // test case 1 ..
-            var sig1 = UnitTestUtitlities.LoadSignal("TestingSignals/Signal1_2048.ds");
-            var expectedOutput = UnitTestUtitlities.LoadSignal("TestingSignals/Signal2_FFT.ds");
+        //[TestMethod]
+        //public void FFT_TestMethod2()
+        //{
+        //    FastFourierTransform FFT = new FastFourierTransform();
+        //    // test case 1 ..
+        //    var sig1 = UnitTestUtitlities.LoadSignal("TestingSignals/Signal1_2048.ds");
+        //    var expectedOutput = UnitTestUtitlities.LoadSignal("TestingSignals/Signal2_FFT.ds");
 
-            FFT.InputTimeDomainSignal = sig1;
-            FFT.InputSamplingFrequency = 360;
+        //    FFT.InputTimeDomainSignal = sig1;
+        //    FFT.InputSamplingFrequency = 360;
 
-            FFT.Run();
+        //    FFT.Run();
 
-            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, FFT.OutputFreqDomainSignal.FrequenciesAmplitudes)
-               && UnitTestUtitlities.SignalsPhaseShiftsAreEqual(expectedOutput.FrequenciesPhaseShifts, FFT.OutputFreqDomainSignal.FrequenciesPhaseShifts));
-        }
+        //    Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(expectedOutput.FrequenciesAmplitudes, FFT.OutputFreqDomainSignal.FrequenciesAmplitudes)
+        //       && UnitTestUtitlities.SignalsPhaseShiftsAreEqual(expectedOutput.FrequenciesPhaseShifts, FFT.OutputFreqDomainSignal.FrequenciesPhaseShifts));
+        //}
         
         [TestMethod]
         public void FFT_TestMethod3()

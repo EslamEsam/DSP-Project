@@ -11,33 +11,32 @@ namespace DSPComponentsUnitTest
     {
         //input : Signal1_FFT
         //output: Signal1_1024
-        [TestMethod]
-        public void IFFT_TestMethod1()
-        {
-            InverseFastFourierTransform IFFT = new InverseFastFourierTransform();
-            IFFT.InputFreqDomainSignal = UnitTestUtitlities.LoadSignal(@"TestingSignals/Signal1_FFT.ds");
-            List<float> outPutSamples = UnitTestUtitlities.LoadSignal("TestingSignals/Signal1_1024.ds").Samples;
+        //public void IFFT_TestMethod1()
+        //{
+        //    InverseFastFourierTransform IFFT = new InverseFastFourierTransform();
+        //    IFFT.InputFreqDomainSignal = UnitTestUtitlities.LoadSignal(@"TestingSignals/Signal1_FFT.ds");
+        //    List<float> outPutSamples = UnitTestUtitlities.LoadSignal("TestingSignals/Signal1_1024.ds").Samples;
 
-            IFFT.Run();
+        //    IFFT.Run();
 
-            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(outPutSamples, 
-                IFFT.OutputTimeDomainSignal.Samples));
-        }
+        //    Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(outPutSamples, 
+        //        IFFT.OutputTimeDomainSignal.Samples));
+        //}
 
-        //input : Signal2_FFT
-        //output: Signal_2048
-        [TestMethod]
-        public void IFFT_TestMethod2()
-        {
-            InverseFastFourierTransform IFFT = new InverseFastFourierTransform();
-            IFFT.InputFreqDomainSignal = UnitTestUtitlities.LoadSignal(@"TestingSignals/Signal2_FFT.ds");
-            List<float> outPutSamples = UnitTestUtitlities.LoadSignal("TestingSignals/Signal2_2048.ds").Samples;
+        ////input : Signal2_FFT
+        ////output: Signal_2048
+        //[TestMethod]
+        //public void IFFT_TestMethod2()
+        //{
+        //    InverseFastFourierTransform IFFT = new InverseFastFourierTransform();
+        //    IFFT.InputFreqDomainSignal = UnitTestUtitlities.LoadSignal(@"TestingSignals/Signal2_FFT.ds");
+        //    List<float> outPutSamples = UnitTestUtitlities.LoadSignal("TestingSignals/Signal2_2048.ds").Samples;
 
-            IFFT.Run();
+        //    IFFT.Run();
             
-            Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(outPutSamples, 
-                IFFT.OutputTimeDomainSignal.Samples));
-        }    
+        //    Assert.IsTrue(UnitTestUtitlities.SignalsSamplesAreEqual(outPutSamples, 
+        //        IFFT.OutputTimeDomainSignal.Samples));
+        //}    
         
         [TestMethod]
         public void IFFT_TestMethod3()
